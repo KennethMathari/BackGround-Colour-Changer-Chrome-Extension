@@ -1,0 +1,53 @@
+// {
+//   "name": "Dark Mode Chrome Extension",
+//   "description": "Dark Mode Chrome Extension for Oaks & Pines Landscaping LTD",
+//   "version": "1.0",
+//   "manifest_version": 2,
+//   "author":"Kenneth Ndung'u",
+//   "icons":{
+//   	"16":"hello_extensions.png"
+//   },
+//   "background":{
+//   	"scripts":["./background.js"]
+//   },
+//   "options_page":"./options.html",
+//   "browser_action":{
+//   	"default_popup": "popup.html"
+//   },
+//   "permissions":[
+//   	"tabs",
+//   	"https://www.oaksandpines.co.ke/*"
+//   ]
+//   }
+
+
+  {
+  "name": "Background Colour Changer",
+  "description": "Changes background colour of webpage!",
+  "version": "1.0",
+  "manifest_version": 3,
+  "author":"Kenneth Ndung'u",
+  "background": {
+    "service_worker": "background.js"
+  },
+  "permissions": ["storage", "activeTab", "scripting"],
+  "action": {
+    "default_popup": "popup.html",
+    "default_icon": {
+      "16": "hello_extensions.png"
+    }
+  },
+  "options_page": "options.html",
+  "icons": {
+    "16": "hello_extensions.png"
+  },
+  "commands": {
+    "_execute_action": {
+      "suggested_key": {
+        "default": "Ctrl+Shift+F",
+        "mac": "MacCtrl+Shift+F"
+      },
+      "description": "Opens popup.html"
+    }
+  }
+}
